@@ -1,0 +1,11 @@
+# You can call the "services" whatever you want,
+# but remember that we reference nextjs in our NGINX configuration file,
+# so, if you change the name here, remember to change it in nginx/default.conf too.
+version: '3'
+services:
+  nextjs:
+    build: ./
+  nginx:
+    build: ./.nginx
+    ports:
+      - 8070:80
