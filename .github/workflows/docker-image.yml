@@ -46,4 +46,4 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: gledinburgh/seed:$(date +%s)
+          tags: seed:$(date +%s)
