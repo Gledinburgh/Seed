@@ -12,4 +12,4 @@ COPY ./default.conf /etc/nginx/conf.d/
 EXPOSE 80
 
 # Launch NGINX
-CMD [ "nginx", "-g", "daemon off;" ]tou
+CMD [ "nginx", "-g", "daemon off;" ]
