@@ -17,10 +17,11 @@
 }
 
 .menu {
+  vertical-align: middle;
   position: absolute;
+
   right: 0;
-  font-size: xx-large;
-  line-height: 0%;
+  font-size: x-large;
   padding-right: 3.33vh;
 
 }
