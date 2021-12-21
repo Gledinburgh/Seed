@@ -1,6 +1,6 @@
 import MainHeader from './MainHeader';
 import SideMenue from './SideMenue';
-import Footer from './Footer';
+import MainFooter from './MainFooter';
 import Title from './Title';
 import { Layout } from 'antd';
 
@@ -21,7 +21,7 @@ export default function MainLayout({ children }) {
       <Title />
       {/* <SideMenue /> */}
       <main>{children}</main>
-      <Footer />
+      <MainFooter />
     </Layout>
   )
 }

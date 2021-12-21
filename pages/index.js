@@ -12,7 +12,7 @@ export default function Home() {
   const title = GeneralContext();
 
   useEffect(() => {
-    context.setTitle("Home");
+    title.setTitle("home");
   })
 
 
@@ -31,10 +31,18 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          upcoming events / artists / archive/
+          upcoming events /
+
+
+          <Link href="Members">
+            <a>artists</a>
+          </Link>
+
+
+          / archive/
         </p>
         <Link href="Members">
-          <a>Members</a>
+          <a>artists</a>
         </Link>
 
         <div className={styles.grid}>
