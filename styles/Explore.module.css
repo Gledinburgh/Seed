@@ -1,0 +1,14 @@
+.row
+{
+  height: 20vh;
+  display: block;
+  position:relative;
+}
+
+.Image
+{
+  top: 0;
+  display: block;
+  max-height: 100%;
+  position: absolute;
+}

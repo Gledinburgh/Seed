@@ -1,8 +1,22 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { useEffect } from 'react';
+import { GeneralContext } from '../Context/GeneralContext';
+
+
+import Link from 'next/link'
 
 export default function Home() {
+
+  const title = GeneralContext();
+
+  useEffect(() => {
+    context.setTitle("Home");
+  })
+
+
+
   return (
     <div className={styles.container}>
       <Head>
@@ -17,8 +31,11 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          upcoming events / artists / archive
+          upcoming events / artists / archive/
         </p>
+        <Link href="Members">
+          <a>Members</a>
+        </Link>
 
         <div className={styles.grid}>
 

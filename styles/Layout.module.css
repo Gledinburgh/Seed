@@ -1,0 +1,21 @@
+.sticky
+{
+  display: block;
+  z-index: 1;
+  width: 100%;
+  min-height: 10vh;
+  background-color: rgb(21, 125, 216);
+  color: red;
+}
+
+.red
+{
+  background-color: red;
+}
+
+.title
+{
+  text-align: center;
+  height: 5vh;
+  vertical-align: middle;
+}
