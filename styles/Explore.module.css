@@ -12,3 +12,19 @@
   max-height: 100%;
   position: absolute;
 }
+
+.name
+{
+  height: 100%;
+}
+
+.name-text
+{
+  font-size: 1.5rem;
+  height: 100%;
+  line-height: 20vh;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+}
