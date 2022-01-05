@@ -1,32 +1,70 @@
 .row
 {
+  min-width: 20vh;
+  min-height: 20vw;
+  max-height: 20vh;
   height: 20vh;
-  display: block;
-  position:relative;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  margin: 1vh;
 }
 
-.Image
+.profile-wrapper
 {
-  top: 0;
-  display: block;
-  max-height: 100%;
-  position: absolute;
+  z-index: 5;
+  padding: 2.5vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+}
+.spacer
+{
+  background-color: grey;
+  height: 10%;
+  height: 5vh;
 }
 
-.name
+.name-wrapper
 {
+  z-index: 5;
+  flex-grow: 6;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
+}
+
+.name-text{
+  line-height: 15vh;
+  vertical-align: middle;
+  font-size:3.2vh;
+  font-weight: 900;
+  text-shadow: 0px 0px 3px lavenderblush;
   height: 100%;
 }
 
-.name-text
+.panel-image
 {
-  font-size: 1.5rem;
+}
+
+.panel-overlay
+{
   height: 100%;
-  line-height: 20vh;
   width: 100%;
-  text-align: center;
-  z-index: 2;
+  z-index:4;
+  background-color: rgba(213, 170, 219, 0.589);
   position: absolute;
+}
+
+.profile-image
+{
+  height: 12vh;
+  width: 12vh;
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: lavender;
 }
 
 /* -- Loading screen -- */
