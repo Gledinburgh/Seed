@@ -8,6 +8,8 @@ import { memberDetails } from '../../data/memberDetails';
 import { useEffect, useState, useContext } from 'react';
 import { GeneralContext } from '../../Context/GeneralContext';
 
+import Link from 'next/link'
+
 
 export default function MemberList() {
 
@@ -24,7 +26,11 @@ export default function MemberList() {
       {
         memberDetails.map(member => {
           return (
-            <MemberPanel member={member} />
+            <>
+              <Link href="TestPortfolio">
+                <a><MemberPanel member={member} /></a>
+              </Link>
+            </>
           )
         })
       }
