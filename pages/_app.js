@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import 'antd/dist/antd.css';
 import { GeneralContextWrapper } from '../Context/GeneralContext';
 import { useEffect, useState } from 'react';
 import { useRouter } from "next/router";

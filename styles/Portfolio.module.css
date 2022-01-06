@@ -1,0 +1,35 @@
+/* --- Hero Image */
+
+.hero-image-wrapper
+{
+  height: 35vh;
+  position: relative;
+}
+
+
+/* --- Nav --- */
+
+.nav-wrapper
+{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+
+  font-size: larger;
+
+}
+
+.col1
+{
+  flex-grow: 2;
+}
+
+.col3
+{
+  flex-grow: 8;
+}

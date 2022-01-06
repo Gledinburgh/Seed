@@ -9,13 +9,10 @@ export default function MainHeader() {
   return (
     <Layout>
       <Header >
-        <div className={styles.padded}>
-          <div className={styles.layer}></div>
-          <div className={styles.layer}>
-            <span className={styles.menu}><MenuOutlined /></span>
-          </div>
-          <div className={styles.layer}></div>
-        </div>
+
+        <span className={styles.menu}><MenuOutlined /></span>
+
+
       </Header>
     </Layout>
 
