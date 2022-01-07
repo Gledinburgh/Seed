@@ -17,8 +17,7 @@
   justify-content: center;
   position: relative;
 
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 10vh;
 
   font-size: larger;
 
@@ -32,4 +31,63 @@
 .col3
 {
   flex-grow: 8;
+}
+
+/* --- Caurosel --- */
+.carousel-wrapper
+{
+  width: 100%;
+  height: max(50vh, 50vw);
+  position: relative;
+  margin-top: 10vh;
+}
+
+.carousel-image
+{
+  object-fit: cover;
+  height: max(50vh, 50vw);
+  width: 100vw;
+}
+.carousel-image-wrapper
+{
+}
+
+.carousel
+{}
+
+.carousel-wrapper > button{
+  top: 0;
+  position: absolute;
+  height: 100%;
+  z-index: 3;
+}
+
+.left-arrow
+{
+  left: 0;
+}
+
+.right-arrow
+{
+  right: 0;
+}
+
+/* --- Bio --- */
+.bio-wrapper
+{
+  margin: 3.5vh;
+  margin-top: 10vh;
+}
+
+/* --- Links --- */
+
+.link-wrapper
+{
+  width: 100%;
+  margin-top: 10vh;
+}
+
+.link-column
+{
+  margin-left: 3.5vh;
 }

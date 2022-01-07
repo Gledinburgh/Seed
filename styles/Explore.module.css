@@ -20,12 +20,6 @@
   flex-grow: 1;
   position: relative;
 }
-.spacer
-{
-  background-color: grey;
-  height: 10%;
-  height: 5vh;
-}
 
 .name-wrapper
 {
