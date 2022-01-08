@@ -81,10 +81,16 @@
 
 /* --- Links --- */
 
+.divider-text
+{
+  align-items: flex-start
+}
+
 .link-wrapper
 {
   width: 100%;
   margin-top: 10vh;
+  padding-right: 3.5vh;
 }
 
 .link-column

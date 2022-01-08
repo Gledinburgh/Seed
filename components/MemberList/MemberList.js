@@ -27,7 +27,7 @@ export default function MemberList() {
         memberDetails.map(member => {
           return (
             <>
-              <Link href="TestPortfolio">
+              <Link href="PowderedWigMachine">
                 <a><MemberPanel member={member} /></a>
               </Link>
             </>
