@@ -8,7 +8,7 @@ const { Header } = Layout;
 export default function MainHeader({ toggleMenuVisibility }) {
   return (
     <Layout>
-      <Header >
+      <Header className={styles.header} >
 
         <span className={styles.menu}>
           <MenuOutlined

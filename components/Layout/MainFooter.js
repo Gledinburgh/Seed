@@ -14,7 +14,7 @@ export default function MainFooter() {
         <Row className={styles["sitemap-links"]} justify="left">
 
           <Col flex={1}>
-            <u>Exhibitions</u>
+            <u>Projects</u>
             <ul>
               <li><a>Sacrilege</a></li>
               <li><a>BlacksheepIII</a></li>
@@ -48,7 +48,6 @@ export default function MainFooter() {
           </Col>
           <Col flex={.5}></Col>
         </Row>
-        <div className={styles.layer}></div>
 
       </Footer >
     </>

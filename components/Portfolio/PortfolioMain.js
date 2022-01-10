@@ -23,9 +23,9 @@ export default function PortfolioMain({ member }) {
 
       <Nav />
 
-      <Gallery id="gallery" />
+      <Gallery />
 
-      < Bio id="bio" bio={member.bio} />
+      < Bio bio={member.bio} />
 
       <Links
 

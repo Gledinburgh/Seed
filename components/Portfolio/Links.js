@@ -35,64 +35,68 @@ export default function Links({ outLinks, contactLinks }) {
   }
 
   return (
+    <>
 
-    <Row wrap={true} justify={"center"} className={styles["link-wrapper"]}>
-
-      <Col flex={1} id="links" className={styles["link-column"]}>
-        <Row>
-          <Divider className={styles["divider-text"]}>
-            External Links
-          </ Divider>
-        </Row>
-        {
-          outLinks.map(({ text, link }) => {
-            return (
-              <Row key={link}>
-                <a rel="noopener noreferrer"
-                  target="_blank"
-                  href={link}
-                >
-                  {text}
-                </a>
-              </Row>
-            );
-          })
-        }
-        <Row> <a>link</a></Row>
-        <Row> <a>link</a></Row>
-      </Col>
+      <div id="links" style={{ height: "15vh" }}></div>
+      <Row wrap={true} justify={"center"} className={styles["link-wrapper"]}>
 
 
-      <Col flex={1} id="contacts" className={styles["link-column"]}>
-        <Row>
-          <Divider className={styles["divider-text"]}>
-            Contacts
-          </Divider>
-        </Row>
-        {
-          contactLinks.map((contact) => {
-            var icon = null;
-            var link = null;
-
-            link = setLink(contact);
-            icon = setIcon(contact.service);
-
-            return (
-              <Row key={link}>
-                <span>
-                  <i className={icon}></i>
-                  {link}
-                </span>
-              </Row>
-            )
-
-
-          })
-        }
+        <Col flex={1} className={styles["link-column"]}>
+          <Row>
+            <Divider className={styles["divider-text"]}>
+              External Links
+            </ Divider>
+          </Row>
+          {
+            outLinks.map(({ text, link }) => {
+              return (
+                <Row key={link}>
+                  <a rel="noopener noreferrer"
+                    target="_blank"
+                    href={link}
+                  >
+                    {text}
+                  </a>
+                </Row>
+              );
+            })
+          }
+          <Row> <a>link</a></Row>
+          <Row> <a>link</a></Row>
+        </Col>
 
 
-      </Col>
+        <Col flex={1} id="contacts" className={styles["link-column"]}>
+          <Row>
+            <Divider className={styles["divider-text"]}>
+              Contacts
+            </Divider>
+          </Row>
+          {
+            contactLinks.map((contact) => {
+              var icon = null;
+              var link = null;
 
-    </Row >
+              link = setLink(contact);
+              icon = setIcon(contact.service);
+
+              return (
+                <Row key={link}>
+                  <span>
+                    <i className={icon}></i>
+                    {link}
+                  </span>
+                </Row>
+              )
+
+
+            })
+          }
+
+
+        </Col>
+
+      </Row >
+    </>
   )
 }

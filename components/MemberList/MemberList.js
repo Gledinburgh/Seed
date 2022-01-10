@@ -1,11 +1,10 @@
-import { Row, Col } from 'antd';
 import Image from 'next/image';
 import MemberPanel from './MemberPanel.js';
 
 import styles from '../../styles/Explore.module.css';
 import { memberDetails } from '../../data/memberDetails';
 
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useContext } from 'react';
 import { GeneralContext } from '../../Context/GeneralContext';
 
 import Link from 'next/link'
