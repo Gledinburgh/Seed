@@ -1,7 +1,10 @@
 import { Row, Col, Carousel } from 'antd';
-import Links from './Links';
-import Gallery from './Gallery';
 import Image from 'next/image';
+import Hero from './Hero';
+import Nav from './Nav';
+import Gallery from './Gallery';
+import Bio from './Bio';
+import Links from './Links';
 
 import styles from '../../styles/Portfolio.module.css';
 
@@ -12,49 +15,23 @@ import { GeneralContext } from '../../Context/GeneralContext';
 
 export default function PortfolioMain({ member }) {
 
-
-  const contentStyle = {
-
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  }
-
   return (
 
 
     <Col>
-      <Row className={styles["hero-image-wrapper"]}>
-        Main image
-        <Image className={styles["carousel-image"]}
-          src={member.hero}
-          layout="fill"
-          objectFit="cover" />
-      </Row>
 
-      <Row className={styles["nav-wrapper"]}>
-        <Col className={styles.col1} />
-        <Col className={styles.col3}>
-          <nav>
-            <a>Gallery</a> |
-            <a> Bio</a> |
-            <a> Contact</a> |
-            <a> Links</a>
-          </nav>
-        </Col>
-        <Col className={styles.col1} />
+      <Hero hero={member.hero} />
 
-
-      </Row >
+      <Nav />
 
       <Gallery />
 
+      < Bio bio={member.bio} />
 
-      <Row className={styles["bio-wrapper"]}>
-        <p className={styles["bio-text"]}>{member.bio}</p>
-      </Row>
-      <Links outLinks={member.outLinks} contactLinks={member.contactLinks} />
+      <Links
+        outLinks={member.outLinks}
+        contactLinks={member.contactLinks}
+      />
 
 
 
