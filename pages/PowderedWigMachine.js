@@ -4,6 +4,8 @@ import Script from 'next/script';
 import PortfolioMain from "../components/Portfolio/PortfolioMain";
 import { powderedWigMachineDetails } from '../data/portfolioDetails/powderedWigMachineDetails';
 
+import { GeneralContext } from '../Context/GeneralContext';
+import { useEffect } from "react";
 
 export default function PowderedWigMachine() {
 

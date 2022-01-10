@@ -28,7 +28,7 @@ export default function PortfolioMain({ member }) {
       <Row className={styles["hero-image-wrapper"]}>
         Main image
         <Image className={styles["carousel-image"]}
-          src={powderedWigMachineDetails.hero}
+          src={member.hero}
           layout="fill"
           objectFit="cover" />
       </Row>
