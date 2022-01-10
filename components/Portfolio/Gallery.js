@@ -1,4 +1,5 @@
 import { Row, Col, Carousel, Image } from 'antd';
+import { useRef } from 'react'
 
 
 import styles from '../../styles/Portfolio.module.css';
@@ -6,35 +7,58 @@ import styles from '../../styles/Portfolio.module.css';
 
 export default function Gallery() {
 
+  const sliderRef = useRef();
+
+  const next = () => {
+    sliderRef.current.next()
+  }
+  const prev = () => {
+    sliderRef.current.prev()
+  }
+
+
   return (
     <div className={styles["carousel-wrapper"]}>
-      <button className={styles["left-arrow"]} > L</button>
-      <button className={styles["right-arrow"]} >R </button>
-      <Carousel className={styles.carousel}>
-        <div className={styles["carousel-image-wrapper"]}>
 
+
+      <button onClick={() => prev()} className={styles["left-arrow"]} > L</button>
+      <button onClick={next} className={styles["right-arrow"]} >R </button>
+      <Carousel
+        ref={sliderRef}
+        className={styles.carousel}>
+
+
+        <Image
+          className={styles["carousel-image"]}
+          src={"/Placeholder_1.jpg"}
+        />
+        <div>
+          <Image
+            className={styles["carousel-image"]}
+            src={"/Placeholder_2.jpg"}
+          />
         </div>
-        <div className={styles["carousel-image-wrapper"]}>
+        <div>
+          <Image
+            className={styles["carousel-image"]}
+            src={"/Placeholder_3.jpg"}
+          />
+        </div>
+        <div>
           <Image
             className={styles["carousel-image"]}
             src={"/Placeholder_1.jpg"}
           />
         </div>
         <div>
-          <h3 >3</h3>
-        </div>
-        <div>
-          <h3 >4</h3>
-        </div>
-        <div>
-          <h3 >5</h3>
-        </div>
-        <div>
-          <h3 >6</h3>
+          <Image
+            className={styles["carousel-image"]}
+            src={"/Placeholder_2.jpg"}
+          />
         </div>
       </Carousel>
 
-    </div>
+    </div >
 
   )
 

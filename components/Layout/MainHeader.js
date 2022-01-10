@@ -5,12 +5,15 @@ import { Layout, Menu, Breadcrumb, Row } from 'antd';
 const { Header } = Layout;
 
 
-export default function MainHeader() {
+export default function MainHeader({ toggleMenuVisibility }) {
   return (
     <Layout>
       <Header >
 
-        <span className={styles.menu}><MenuOutlined /></span>
+        <span className={styles.menu}>
+          <MenuOutlined
+            onClick={() => toggleMenuVisibility()} />
+        </span>
 
 
       </Header>

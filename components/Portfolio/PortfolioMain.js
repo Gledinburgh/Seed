@@ -10,7 +10,6 @@ import styles from '../../styles/Portfolio.module.css';
 
 
 import { useEffect, useState, useContext } from 'react';
-import { GeneralContext } from '../../Context/GeneralContext';
 
 
 export default function PortfolioMain({ member }) {
@@ -20,15 +19,16 @@ export default function PortfolioMain({ member }) {
 
     <Col>
 
-      <Hero hero={member.hero} />
+      <Hero hero={member.hero} text={member.member} />
 
       <Nav />
 
-      <Gallery />
+      <Gallery id="gallery" />
 
-      < Bio bio={member.bio} />
+      < Bio id="bio" bio={member.bio} />
 
       <Links
+
         outLinks={member.outLinks}
         contactLinks={member.contactLinks}
       />

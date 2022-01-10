@@ -16,10 +16,11 @@ export default function Title() {
   if (!title) title = "Main Layout Default Title";
 
   return (
-    <div className={styles.title}>
-      <h1 className={styles["title-text"]} >
-        {title}
-      </ h1>
-    </div>
+    // <div className={styles.title}>
+    //   <h1 className={styles["title-text"]} >
+    //     {title}
+    //   </ h1>
+    // </div>
+    <div></div>
   )
 }

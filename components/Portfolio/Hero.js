@@ -7,14 +7,19 @@ import Image from 'next/image';
 
 
 
-export default function Hero({ hero }) {
+export default function Hero({ hero, text }) {
   return (
-    <Row className={styles["hero-image-wrapper"]}>
-      Main image
-      <Image className={styles["carousel-image"]}
-        src={hero}
-        layout="fill"
-        objectFit="cover" />
-    </Row>
+    <>
+      <Row className={styles["hero-image-wrapper"]}>
+        Main image
+        <Image className={styles["carousel-image"]}
+          src={hero}
+          layout="fill"
+          objectFit="cover" />
+      </Row>
+      <div className={styles["hero-text"]}>
+        {text}
+      </div>
+    </>
   )
 }

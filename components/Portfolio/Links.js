@@ -38,7 +38,7 @@ export default function Links({ outLinks, contactLinks }) {
 
     <Row wrap={true} justify={"center"} className={styles["link-wrapper"]}>
 
-      <Col flex={1} className={styles["link-column"]}>
+      <Col flex={1} id="links" className={styles["link-column"]}>
         <Row>
           <Divider className={styles["divider-text"]}>
             External Links
@@ -63,7 +63,7 @@ export default function Links({ outLinks, contactLinks }) {
       </Col>
 
 
-      <Col flex={1} className={styles["link-column"]}>
+      <Col flex={1} id="contacts" className={styles["link-column"]}>
         <Row>
           <Divider className={styles["divider-text"]}>
             Contacts

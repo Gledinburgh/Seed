@@ -1,5 +1,5 @@
 import MainHeader from './MainHeader';
-import SideMenue from './SideMenue';
+import SideMenu from './SideMenu';
 import MainFooter from './MainFooter';
 import Title from './Title';
 import { Layout } from 'antd';
@@ -11,15 +11,24 @@ import { GeneralContext } from '../../Context/GeneralContext';
 
 export default function MainLayout({ children }) {
 
+  const [menuVisibility, setMenuVisibility] = useState(false);
+
+  const toggleMenuVisibility = () => {
+    setMenuVisibility(!menuVisibility)
+  }
+
+
   useEffect(() => {
     console.log('UseEffect: MainLayout')
   }, [])
 
   return (
     <Layout>
-      <MainHeader />
+      <MainHeader toggleMenuVisibility={toggleMenuVisibility} />
       <Title />
-      {/* <SideMenue /> */}
+      <SideMenu
+        visibility={menuVisibility}
+      />
       <main>{children}</main>
       <MainFooter />
     </Layout>
