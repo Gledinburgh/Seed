@@ -2,7 +2,7 @@ import { Drawer, Menu } from 'antd';
 import { useState, useEffect } from 'react';
 
 
-export default function SideMenu({ visibility }) {
+export default function SideMenu({ visibility, toggleMenuVisibility }) {
 
   const [visible, setVisible] = useState(false);
 
@@ -12,7 +12,7 @@ export default function SideMenu({ visibility }) {
 
 
   const onClose = () => {
-    setVisible(false);
+    toggleMenuVisibility()
   };
   useEffect(() => {
     console.log("useEffect: Side Menu")

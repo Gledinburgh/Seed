@@ -28,6 +28,7 @@ export default function MainLayout({ children }) {
       <Title />
       <SideMenu
         visibility={menuVisibility}
+        toggleMenuVisibility={toggleMenuVisibility}
       />
       <main>{children}</main>
       <MainFooter />
