@@ -18,7 +18,7 @@ export const memberDetails = [
     "profile": "profile_placeholder.png"
   },
   {
-    "member": "Sheila Marie",
+    "member": "Wildhoneypot",
     "panel": "Placeholder_3.jpg",
     "alt": "place holder image",
     "profile": "profile_placeholder.png"

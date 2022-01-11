@@ -1,13 +1,12 @@
 .row
 {
-  min-width: 20vh;
-  min-height: 20vw;
-  max-height: 20vh;
+  color: black;
   height: 20vh;
   display: flex;
   position: relative;
   flex-direction: row;
   margin: 1vh;
+  overflow: hidden;
 }
 
 .profile-wrapper
@@ -25,23 +24,27 @@
 {
   z-index: 5;
   flex-grow: 6;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  height: 100%;
 
 }
 
 .name-text{
-  line-height: 15vh;
+  line-height: 20vh;
   vertical-align: middle;
   font-size:3.2vh;
   font-weight: 900;
   text-shadow: 0px 0px 3px lavenderblush;
-  color: black;
   height: 100%;
 }
 
 .panel-image
 {
+  position: absolute;
+  top: 0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .panel-overlay
@@ -55,8 +58,8 @@
 
 .profile-image
 {
-  height: 12vh;
-  width: 12vh;
+  height: 15vh;
+  width: 15vh;
   object-fit: cover;
   border-radius: 50%;
   background-color: lavender;

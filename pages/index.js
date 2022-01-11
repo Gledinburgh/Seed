@@ -36,17 +36,17 @@ export default function Home() {
         <p className={styles.description}>
           /
           <Link href="UpComming">
-            <a>upcoming events</a>
+            <a> upcoming events </a>
           </Link>
           /
           <Link href="Members">
-            <a>artists</a>
+            <a> portfolios </a>
           </Link>
 
 
           /
           <Link href="Archive">
-            <a>archive</a>
+            <a> archive </a>
           </Link>/
         </p>
 

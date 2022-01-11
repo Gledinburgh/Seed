@@ -1,5 +1,6 @@
 import { Row, Col } from 'antd';
-import Image from 'next/image';
+// import Image from 'next/image';
+import { Image } from 'antd';
 
 import styles from '../../styles/Explore.module.css';
 import { memberDetails } from '../../data/memberDetails';
@@ -29,12 +30,13 @@ export default function MemberPanel({ member }) {
       </Col>
 
       <div className={styles["panel-overlay"]}></div>
-      <Image
-        className={styles["panel-image"]}
-        src={`${panelPath}${member.panel}`}
-        layout="fill"
-        objectFit="cover"
-      />
+      <div className={styles["panel-image"]}>
+        <Image
+
+          src={`${panelPath}${member.panel}`}
+        />
+
+      </div>
 
 
     </Row >
