@@ -40,14 +40,14 @@ export default function Links({ outLinks, contactLinks }) {
 
     return (
 
-      links.map((contact) => {
+      links.map((linkObject) => {
         var icon = null;
         var link = null;
 
-        link = setLink(contact);
-        icon = setIcon(contact.service);
+        link = setLink(linkObject);
+        icon = setIcon(linkObject.service);
 
-        if (contact.link) {
+        if (linkObject.link) {
           return (
             <Row key={link}>
               <span >
