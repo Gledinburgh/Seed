@@ -17,17 +17,17 @@ export const powderedWigMachineDetails = {
         "alt": "external link to Powdered Wig Machine youtube channel"
       },
       {
-        //"service": "cashapp",
+        "service": "venmo",
+        "link": "https://venmo.com/u/powderedwigmachine",
+        "text": "Venmo: @powderedwigmachine",
+        "alt": "external link to Powdered Wig Machine Venmo"
+      },
+      {
+        "service": "cashapp",
         "link": "https://cash.app/$powderedwigmachine",
         "text": "CashApp: $powderedwigmachine",
         "alt": "external link to Powdered Wig Machine Cashapp"
 
-      },
-      {
-        "service:": "venmo",
-        "link": "https://venmo.com/u/powderedwigmachine",
-        "text": "Venmo: @powderedwigmachine",
-        "alt": "external link to Powdered Wig Machine Venmo"
       },
       {
         "service": "tiktok",
@@ -46,21 +46,24 @@ export const powderedWigMachineDetails = {
         "service": "email",
         "link": "powigmachine@gmail.com",
         "text": "powigmachine@gmail.com ",
-        "alt": "Email adress for Powdered Wig Machine"
+        "alt": "Email address for Powdered Wig Machine"
       },
     ],
   "outLinks": [
     {
-      "text:": "The Creative Connection Interview",
-      "link": "https://culturecraft.blog/2021/07/17/powdered-wig-machine/"
+      "service": "link",
+      "link": "https://culturecraft.blog/2021/07/17/powdered-wig-machine/",
+      "text": "The Creative Connection Interview",
     },
     {
+      "service": "spotify",
+      "link": "https://open.spotify.com/episode/0uSWDQVPh47KujL5GHbz1x?si=K1CCoWKPRBm-4GtJNaFuIg",
       "text": "Q & A With Patricia",
-      "link": "https://open.spotify.com/episode/0uSWDQVPh47KujL5GHbz1x?si=K1CCoWKPRBm-4GtJNaFuIg"
     },
     {
+      "service": "youtube",
+      "link": "https://youtu.be/Cl2s1LRyI_k",
       "text": "Patricia and the Bra-Lettes [live]",
-      "link": "https://youtu.be/Cl2s1LRyI_k"
     },
 
   ],

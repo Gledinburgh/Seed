@@ -1,5 +1,7 @@
 import styles from '../../styles/Portfolio.module.css';
 import { fontAwsomeIcons as icons } from '../../data/fontAwsomeIcons';
+import Script from 'next/script';
+
 
 import { Row, Col, Divider } from 'antd';
 
@@ -34,8 +36,40 @@ export default function Links({ outLinks, contactLinks }) {
     }
   }
 
+  function mapLinks(links) {
+
+    return (
+
+      links.map((contact) => {
+        var icon = null;
+        var link = null;
+
+        link = setLink(contact);
+        icon = setIcon(contact.service);
+
+        if (contact.link) {
+          return (
+            <Row key={link}>
+              <span >
+                <span className={styles.icon}>
+                  <i className={icon}></i>
+                </span>
+                {link}
+              </span>
+            </Row>
+          )
+        } else {
+          return <span />;
+        }
+      })
+    )
+
+
+  }
+
   return (
     <>
+      <Script src="https://kit.fontawesome.com/1960917441.js" crossOrigin="anonymous"></Script>
 
       <div id="links" style={{ height: "15vh" }}></div>
       <Row wrap={true} justify={"center"} className={styles["link-wrapper"]}>
@@ -48,21 +82,9 @@ export default function Links({ outLinks, contactLinks }) {
             </ Divider>
           </Row>
           {
-            outLinks.map(({ text, link }) => {
-              return (
-                <Row key={link}>
-                  <a rel="noopener noreferrer"
-                    target="_blank"
-                    href={link}
-                  >
-                    {text}
-                  </a>
-                </Row>
-              );
-            })
+            mapLinks(outLinks)
           }
-          <Row> <a>link</a></Row>
-          <Row> <a>link</a></Row>
+
         </Col>
 
 
@@ -73,27 +95,8 @@ export default function Links({ outLinks, contactLinks }) {
             </Divider>
           </Row>
           {
-            contactLinks.map((contact) => {
-              var icon = null;
-              var link = null;
-
-              link = setLink(contact);
-              icon = setIcon(contact.service);
-
-              return (
-                <Row key={link}>
-                  <span>
-                    <i className={icon}></i>
-                    {link}
-                  </span>
-                </Row>
-              )
-
-
-            })
+            mapLinks(contactLinks)
           }
-
-
         </Col>
 
       </Row >

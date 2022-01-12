@@ -111,3 +111,12 @@ font-size: 2.5rem;
 {
   margin-left: 3.5vh;
 }
+
+.icon
+{
+  width: 2vh !important;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  color: rgb(8, 20, 13);
+}

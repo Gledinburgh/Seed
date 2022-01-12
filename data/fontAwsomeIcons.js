@@ -1,8 +1,8 @@
 export const fontAwsomeIcons = {
   "youtube": "fab fa-youtube",
   "tiktok": "fab fa-tiktok",
-  //"venmo": "fas fa-donate",
-  //"cashapp": "fas fa-dollar-sign",
+  "venmo": "fas fa-donate",
+  "cashapp": "fas fa-dollar-sign",
   "instagram": "fab fa-instagram",
   "facebook": "fab fa-facebook-square",
   "twitter": "fab fa-twitter",
