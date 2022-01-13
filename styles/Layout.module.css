@@ -1,12 +1,12 @@
 .padded
 {
   display: block;
+  background-color: rgb(224, 224, 224);
   z-index: 1;
-  width: 100%;
-  background-color: rgb(2, 26, 5);
-  color: white;
+  color: rgb(0, 0, 0);
   padding-left: 0 ;
   padding-right: 0 ;
+  height: 50vh;
 
 
 }
@@ -51,13 +51,13 @@
 
 .sitemap-links
 {
-  padding-left: 3.5vh;
-  padding-right: 3.5vh;
 }
 
 .tab
 {
-  color: white;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  width: 100%;
 }
 
 

@@ -42,13 +42,42 @@ export default function UpComing() {
       </Card >
     )
   }
+  const MemberTest = () => {
+    return (
+      <Card
+        style={{ margin: "2vh", width: "100%" }}
+        cover={
+          <img
+            style={{ height: "20vh", objectFit: "cover" }}
+            alt="example"
+            src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+          />
+        }
+
+      >
+        <Meta
+          avatar={<Avatar
+            style={{ postion: "absolute", top: 0, width: "10vh", height: "10vh" }}
+            src="https://joeschmoe.io/api/v1/random" />
+          }
+          title="Powdered Wig Machine"
+          description={
+            < div >
+              <span>Performace | </span>
+              <span>Music| Writing | Art Direction</span>
+            </div >}
+        />
+      </Card >
+    )
+  }
+
 
   return (
 
 
     <Col >
       <Row >
-        <CardExample />
+        <MemberTest />
       </Row>
       <Row >
         <CardExample />

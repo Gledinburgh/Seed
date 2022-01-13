@@ -15,19 +15,22 @@ export default function MainFooter() {
     <>
 
       <Footer className={styles.padded}>
-        <Row className={styles["sitemap-links"]}>
+        <Row className={styles["sitemap-links"]} justify="start">
 
           <div className={styles.layer}></div>
           <Tabs
-            tabBarStyle={{ width: "95vw", color: "white" }}
+            tabBarStyle={{ width: "95vw" }}
             tabBarGutter={"5vw"}
+            className={styles.tab}
             defaultActiveKey="2">
             {
               siteMap.map((location, index) => {
+                if (location.title === "Home") return (<span></span>)
                 return (
                   <TabPane
                     tab={<span >{location.title}</span>}
-                    key={index + 1}>
+                    key={index + 1}
+                  >
                     <Col >
                       <ul>
                         {
@@ -35,7 +38,8 @@ export default function MainFooter() {
                             return (
                               <Link
                                 href={link.link}
-                                alt={link.alt}>
+                                alt={link.alt}
+                              >
                                 <a alt={link.alt}>
                                   <li>{link.text}</li>
                                 </a>
