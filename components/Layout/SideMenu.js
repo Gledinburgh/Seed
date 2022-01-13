@@ -1,5 +1,7 @@
 import { Drawer, Menu } from 'antd';
 import { useState, useEffect } from 'react';
+import { siteMap } from '../../data/siteMap';
+import { ILink, ISiteLocation } from '../../types/index';
 
 import Link from 'next/link'
 
@@ -20,34 +22,6 @@ export default function SideMenu({ visibility, toggleMenuVisibility }) {
     setVisible(visibility);
   }, [visibility])
 
-  const siteMap = [
-    {
-      "text": "Home",
-      "href": "/",
-      "key": 1
-    },
-    {
-      "text": "Portfolios",
-      "href": "/Members",
-      "key": 2
-    },
-    {
-      "text": "Projects",
-      "href": "/Archive",
-      "key": 3
-    },
-    {
-      "text": "Get Involved",
-      "href": "/GetInvolved",
-      "key": 4
-    },
-    {
-      "text": "Up Coming Events",
-      "href": "/UpComing",
-      "key": 5
-    }
-  ]
-
   return (
     <Drawer
       title="Site Map"
@@ -57,25 +31,16 @@ export default function SideMenu({ visibility, toggleMenuVisibility }) {
       <div>
         <Menu mode="inline" defaultSelectedKeys={['1']}>
           {
-            siteMap.map((page) => {
+            siteMap.map((page, index) => {
               return (
-                <Menu.Item onClick={() => toggleMenuVisibility()} key={page.key}>
+                <Menu.Item onClick={() => toggleMenuVisibility()} key={index + 1}>
                   <Link href={page.href}>
-                    {page.text}
+                    {page.title}
                   </Link>
                 </Menu.Item>
               )
             })
           }
-          {/* <Menu.Item onClick={() => toggleMenuVisibility()} key="1">
-            <Link href="/">
-              Home
-            </Link>
-          </Menu.Item>
-
-          <Menu.Item key="2"> Members </Menu.Item>
-          <Menu.Item key="3"> Projects </Menu.Item>
-          <Menu.Item key="4"> Get Involved </Menu.Item> */}
         </Menu>
       </div >
     </Drawer>

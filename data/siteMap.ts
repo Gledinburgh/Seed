@@ -1,5 +1,5 @@
 import { memberDetails } from './memberDetails';
-import { ILink, siteLocation } from '../types';
+import { ILink, ISiteLocation } from '../types';
 
 const portfolios: ILink[] = memberDetails.map((member) => {
   return (
@@ -13,9 +13,22 @@ const portfolios: ILink[] = memberDetails.map((member) => {
 });
 
 
-export const siteMap: siteLocation[] = [
+export const siteMap: ISiteLocation[] = [
+  {
+    "title": "Home",
+    "href": "/",
+    "links": [
+      {
+        "service": "string",
+        "link": "'string'",
+        "text": 'string',
+        "alt": 'string',
+      },
+    ]
+  },
   {
     "title": "Projects",
+    "href": "/Archive",
     "links": [
       {
         "service": "string",
@@ -27,10 +40,12 @@ export const siteMap: siteLocation[] = [
   },
   {
     "title": "Portfolios",
+    "href": "/Members",
     "links": portfolios
   },
   {
     "title": "Get Involved",
+    "href": "/GetInvolved",
     "links": [
       {
         "service": "string",
@@ -42,6 +57,7 @@ export const siteMap: siteLocation[] = [
   },
   {
     "title": "Upcoming",
+    "href": "/UpComing",
     "links": [
       {
         "service": "string",

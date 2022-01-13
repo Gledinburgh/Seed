@@ -20,7 +20,8 @@ export interface IPortfolioDetails {
   "bio": string
 }
 
-export interface siteLocation {
+export interface ISiteLocation {
   "title": string,
+  "href": string,
   "links": ILink[]
 }
