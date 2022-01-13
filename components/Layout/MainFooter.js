@@ -1,7 +1,13 @@
-import { Layout, Row, Col } from 'antd';
+
+import { Layout, Row, Col, Tabs } from 'antd';
 const { Footer } = Layout;
+const { TabPane } = Tabs;
+import Link from 'next/link'
 
 import styles from '../../styles/Layout.module.css';
+
+import { siteItems } from '../../types';
+import { siteMap } from '../../data/siteMap';
 
 
 export default function MainFooter() {
@@ -9,45 +15,45 @@ export default function MainFooter() {
     <>
 
       <Footer className={styles.padded}>
-        <div className={styles.layer}></div>
+        <Row className={styles["sitemap-links"]}>
 
-        <Row className={styles["sitemap-links"]} justify="left">
+          <div className={styles.layer}></div>
+          <Tabs
+            tabBarStyle={{ width: "95vw", color: "white" }}
+            tabBarGutter={"5vw"}
+            defaultActiveKey="2">
+            {
+              siteMap.map((location, index) => {
+                return (
+                  <TabPane
+                    tab={<span >{location.title}</span>}
+                    key={index + 1}>
+                    <Col >
+                      <ul>
+                        {
+                          location.links.map((link) => {
+                            return (
+                              <Link
+                                href={link.link}
+                                alt={link.alt}>
+                                <a alt={link.alt}>
+                                  <li>{link.text}</li>
+                                </a>
+                              </Link>
+                            )
+                          })
+                        }
+                      </ul>
 
-          <Col flex={1}>
-            <u>Projects</u>
-            <ul>
-              <li><a>Sacrilege</a></li>
-              <li><a>BlacksheepIII</a></li>
-              <li><a>Valentine</a></li>
-              <li><a>BlackSheep2</a></li>
-            </ul>
+                    </Col>
+                  </TabPane>
+                )
+              })
+            }
+          </Tabs>
 
-          </Col>
-          <Col flex={1}>
-            <u>Portfolios</u>
-            <ul>
-              <li><a>Shiela Marie</a></li>
-              <li><a>Powdered Wig Machine</a></li>
-              <li><a>Mauro de lo Tierra</a></li>
-              <li><a>Marlin Bogle</a></li>
-              <li><a>The Wizzard</a></li>
-              <li><a>Hated Bodies</a></li>
-              <li><a>Mia Santiago</a></li>
-              <li><a>Raven M</a></li>
-              <li><a>Glenn Edinburgh</a></li>
-            </ul>
-          </Col>
 
-          <Col flex={1}>
-            <u>Get Involved</u>
-            <ul>
-              <li><a>Donate</a></li>
-              <li><a>About us</a></li>
-              <li><a>Upcomming</a></li>
-            </ul>
-          </Col>
-          <Col flex={.5}></Col>
-        </Row>
+        </ Row>
 
       </Footer >
     </>

@@ -8,6 +8,7 @@
   padding-left: 0 ;
   padding-right: 0 ;
 
+
 }
 
 .layer
@@ -43,13 +44,22 @@
 }
 
 
-
-.sitemap-links
-{
-  margin-left: 3.5vh;
-}
-
 .header
 {
   z-index: 5;
 }
+
+/* --- Site Map --- */
+
+.sitemap-links
+{
+  padding-left: 3.5vh;
+  padding-right: 3.5vh;
+}
+
+.tab
+{
+  color: white;
+}
+
+

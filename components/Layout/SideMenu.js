@@ -42,8 +42,8 @@ export default function SideMenu({ visibility, toggleMenuVisibility }) {
       "key": 4
     },
     {
-      "text": "Up Comming Events",
-      "href": "/UpComming",
+      "text": "Up Coming Events",
+      "href": "/UpComing",
       "key": 5
     }
   ]

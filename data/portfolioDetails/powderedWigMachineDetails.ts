@@ -1,7 +1,12 @@
-export const powderedWigMachineDetails = {
+import { IPortfolioDetails } from "../../types";
+
+export const powderedWigMachineDetails: IPortfolioDetails = {
 
   "member": "Powdered Wig Machine",
-  "hero": "/Placeholder_1.jpg",
+  "hero": {
+    "src": "/Placeholder_1.jpg",
+    "alt": "placeholder Image"
+  },
   "gallery": [
     { "src": "/Placeholder_1.jpg", "alt": "place holder one" },
     { "src": "/Placeholder_2.jpg", "alt": "place holder two" },
@@ -27,7 +32,6 @@ export const powderedWigMachineDetails = {
         "link": "https://cash.app/$powderedwigmachine",
         "text": "CashApp: $powderedwigmachine",
         "alt": "external link to Powdered Wig Machine Cashapp"
-
       },
       {
         "service": "tiktok",
@@ -35,7 +39,6 @@ export const powderedWigMachineDetails = {
         "text": "@powderedwigmachine",
         "alt": "external link to Powdered Wig Machine tiktok"
       },
-      { "twitter": null },
       {
         "service": "instagram",
         "link": "https://www.instagram.com/powderedwigmachine/",
@@ -54,16 +57,20 @@ export const powderedWigMachineDetails = {
       "service": "link",
       "link": "https://culturecraft.blog/2021/07/17/powdered-wig-machine/",
       "text": "The Creative Connection Interview",
+      "alt": "external link to The Creative Connection blog"
     },
     {
       "service": "spotify",
       "link": "https://open.spotify.com/episode/0uSWDQVPh47KujL5GHbz1x?si=K1CCoWKPRBm-4GtJNaFuIg",
       "text": "Q & A With Patricia",
+      "alt": "external link to Spotify audio streaming of Q & A With Patricia",
+
     },
     {
       "service": "youtube",
       "link": "https://youtu.be/Cl2s1LRyI_k",
       "text": "Patricia and the Bra-Lettes [live]",
+      "alt": "external link to youtube streaming of a performace by Patricia and the Bra-Lettes"
     },
 
   ],

@@ -1,4 +1,5 @@
 import styles from '../../styles/Portfolio.module.css';
+import { ILink } from '../../types';
 import { fontAwsomeIcons as icons } from '../../data/fontAwsomeIcons';
 import Script from 'next/script';
 
@@ -7,10 +8,10 @@ import { Row, Col, Divider } from 'antd';
 
 
 
-export default function Links({ outLinks, contactLinks }) {
+export default function Links({ outLinks, contactLinks }: { outLinks: ILink[], contactLinks: ILink[] }) {
 
 
-  function setLink(contact) {
+  function setLink(contact: ILink) {
     if (contact && contact.service === "email") {
       return <a className="mailto" href={`mailto:${contact.link}`}>{contact.text}</a>;
     }
@@ -26,7 +27,7 @@ export default function Links({ outLinks, contactLinks }) {
     }
   }
 
-  function setIcon(service) {
+  function setIcon(service: string) {
 
     if (service && icons[service]) {
       return icons[service];
@@ -36,7 +37,7 @@ export default function Links({ outLinks, contactLinks }) {
     }
   }
 
-  function mapLinks(links) {
+  function mapLinks(links: ILink[]) {
 
     return (
 

@@ -5,8 +5,8 @@ import { GeneralContext } from '../Context/GeneralContext';
 import { useEffect } from "react";
 
 
-import Link from 'next/link'
-import Script from 'next/script'
+import Link from 'next/link';
+import Script from 'next/script';
 
 
 export default function Home() {
