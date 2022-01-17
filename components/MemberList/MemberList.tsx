@@ -1,17 +1,15 @@
-import Image from 'next/image';
-import MemberPanel from './MemberPanel.js';
+import MemberCard from './MemberCard';
+import Link from 'next/link';
 
-import styles from '../../styles/Explore.module.css';
-import { memberDetails } from '../../data/memberDetails';
-
-import { useEffect, useContext } from 'react';
+import { useEffect } from 'react';
 import { GeneralContext } from '../../Context/GeneralContext';
+import { IMemberDetails } from '../../types';
 
-import Link from 'next/link'
 
 
-export default function MemberList() {
 
+
+export default function MemberList({ memberDetails }: { memberDetails: IMemberDetails[] }) {
 
   const context = GeneralContext();
 
@@ -21,26 +19,21 @@ export default function MemberList() {
   }, [])
 
   return (
-    <content>
+    <div>
+
       {
         memberDetails.map(member => {
           return (
             <>
               <Link href="PowderedWigMachine">
-                <a><MemberPanel member={member} /></a>
+                <a> <MemberCard member={member} /></a>
               </Link>
             </>
           )
         })
       }
-    </content >
+    </div>
   )
 }
 
-{/*//
- */}
-{/*
- */}
-{/*
- //*/}
 

@@ -25,3 +25,24 @@ export interface ISiteLocation {
   "href": string,
   "links": ILink[]
 }
+
+export interface IMemberDetails {
+  "member": string,
+  "panel": string,
+  "link": string,
+  "alt": string,
+  "profile": string
+}
+
+export interface IEvent {
+  "coverImage": string,
+  "title": string,
+  "alt": string,
+  "weekday": string,
+  "time": string,
+  "location": string,
+  "city": string,
+  "state": string,
+  "day": string,
+  "month": string,
+}

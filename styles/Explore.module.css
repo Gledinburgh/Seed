@@ -9,6 +9,13 @@
   overflow: hidden;
 }
 
+/* --- Card --- */
+
+.card-wrapper
+{
+  margin: 2vh;
+}
+
 .profile-wrapper
 {
   z-index: 5;
@@ -20,48 +27,39 @@
   position: relative;
 }
 
-.name-wrapper
+.cover-image
 {
-  z-index: 5;
-  flex-grow: 6;
-  height: 100%;
-
+ height: 100%;
+ width: 100%;
+ object-fit: cover;
+ border: solid white 2px;
 }
 
-.name-text{
-  line-height: 20vh;
-  vertical-align: middle;
-  font-size:3.2vh;
+.cover-wrapper
+{
+  background-color: rgb(255, 200, 175);
+  position: relative;
+  height: 25vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.member-panel-title
+{
+  font-size:3.5vh;
   font-weight: 900;
   text-shadow: 0px 0px 3px lavenderblush;
-  height: 100%;
 }
 
-.panel-image
+.card-title
 {
-  position: absolute;
-  top: 0;
-  left:0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.panel-overlay
-{
-  height: 100%;
-  width: 100%;
-  z-index:4;
-  background-color: rgba(213, 170, 219, 0.589);
-  position: absolute;
+  margin-top: 1vh;
 }
 
 .profile-image
 {
-  height: 15vh;
-  width: 15vh;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 10vh;
+  height: 10vh;
   background-color: lavender;
 }
 
@@ -69,6 +67,7 @@
 
 .fullsize
 {
+  z-index: 100;
   position: absolute;
   height: 100%;
   width: 100%;

@@ -1,4 +1,6 @@
-export const memberDetails = [
+import { IMemberDetails } from "../types";
+
+export const memberDetails: IMemberDetails[] = [
   {
     "member": "Powdered Wig Machine",
     "panel": "Brandon.jpg",
