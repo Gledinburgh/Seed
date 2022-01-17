@@ -1,5 +1,4 @@
 import EventCard from './EventCard';
-import Link from 'next/link';
 import { IEvent } from '../../types';
 
 
