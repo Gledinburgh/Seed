@@ -8,15 +8,27 @@ import { useEffect, useState } from 'react';
 //----------- Dummy Data Start ------------
 
 const eventsDetails: IEvent[] = [{
-  "coverImage": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  "title": "Patricia and the Bra-Lettes",
+  "coverImage": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F211266459%2F525255390127%2F1%2Foriginal.20220112-142526?h=2000&w=720&auto=format%2Ccompress&q=75&sharp=10&s=5ba79feb0d4b8bbd7795f650086746e1",
+  "title": "Patricia and Her Wizard Sluts",
+  "alt": "event place holder image",
+  "weekday": "Sat",
+  "time": "5:30 - 7:00 PM",
+  "location": "Carnival Lounge",
+  "city": "NO",
+  "state": "LA",
+  "day": "22",
+  "month": "JAN"
+},
+{
+  "coverImage": "https://f4.bcbits.com/img/0025583089_10.jpg",
+  "title": "The Wizard",
   "alt": "event place holder image",
   "weekday": "Wed",
-  "time": "5:30 - 7:00 PM",
+  "time": "8:30 - 10:00 PM",
   "location": "Social Beer Garden",
   "city": "HOU",
   "state": "TX",
-  "day": "15",
+  "day": "30",
   "month": "JAN"
 
 },
@@ -26,24 +38,11 @@ const eventsDetails: IEvent[] = [{
   "alt": "event place holder image",
   "weekday": "Wed",
   "time": "5:30 - 7:00 PM",
-  "location": "Social Beer Garden",
+  "location": "Match",
   "city": "HOU",
   "state": "TX",
-  "day": "15",
-  "month": "JAN"
-
-},
-{
-  "coverImage": "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png",
-  "title": "Patricia and the Bra-Lettes",
-  "alt": "event place holder image",
-  "weekday": "Wed",
-  "time": "5:30 - 7:00 PM",
-  "location": "Social Beer Garden",
-  "city": "HOU",
-  "state": "TX",
-  "day": "15",
-  "month": "JAN"
+  "day": "12",
+  "month": "FEB"
 
 }]
 

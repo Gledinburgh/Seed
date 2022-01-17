@@ -26,35 +26,35 @@ export const siteMap: ISiteLocation[] = [
       },
     ]
   },
-  {
-    "title": "Projects",
-    "href": "/Archive",
-    "links": [
-      {
-        "service": "string",
-        "link": "'string'",
-        "text": 'string',
-        "alt": 'string',
-      },
-    ]
-  },
+  // {
+  //   "title": "Projects",
+  //   "href": "/Archive",
+  //   "links": [
+  //     {
+  //       "service": "string",
+  //       "link": "'string'",
+  //       "text": 'string',
+  //       "alt": 'string',
+  //     },
+  //   ]
+  // },
   {
     "title": "Portfolios",
     "href": "/Members",
     "links": portfolios
   },
-  {
-    "title": "Get Involved",
-    "href": "/GetInvolved",
-    "links": [
-      {
-        "service": "string",
-        "link": "'string'",
-        "text": 'string',
-        "alt": 'string',
-      },
-    ]
-  },
+  // {
+  //   "title": "Get Involved",
+  //   "href": "/GetInvolved",
+  //   "links": [
+  //     {
+  //       "service": "string",
+  //       "link": "'string'",
+  //       "text": 'string',
+  //       "alt": 'string',
+  //     },
+  //   ]
+  // },
   {
     "title": "Upcoming",
     "href": "/UpComing",

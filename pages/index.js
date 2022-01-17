@@ -35,19 +35,18 @@ export default function Home() {
 
         <p className={styles.description}>
           /
-          <Link href="UpComming">
-            <a> upcoming events </a>
-          </Link>
-          /
           <Link href="Members">
             <a> portfolios </a>
           </Link>
-
-
           /
-          <Link href="Archive">
+          <Link href="UpComing">
+            <a> upcoming events </a>
+          </Link>
+          /
+          {/* <Link href="Archive">
             <a> archive </a>
-          </Link>/
+          </Link>
+          / */}
         </p>
 
         <div className={styles.grid}>
