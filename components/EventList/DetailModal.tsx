@@ -75,7 +75,7 @@ export default function DetailModal({ eventDetail, isModalVisible, handleCancel 
           </Col>
           <Col>
             <h2>About This Event</h2>
-            <p>Flutterbug & Friends, featuring Flutterbug and Scribbles, the Mudlarks, Dante, Scabies, Cookie Tongue, Patricia and Her Wizard Sluts, and Mauro De La Tiero. Puppetry, Clown Noise, Projections, Magic, and Vendors! Saturday, January 22 at 9pm. $10 in advance and $15 at the door. PS - It's Flutterbug's Birthday!!!</p>
+            <p>{`Flutterbug & Friends, featuring Flutterbug and Scribbles, the Mudlarks, Dante, Scabies, Cookie Tongue, Patricia and Her Wizard Sluts, and Mauro De La Tiero. Puppetry, Clown Noise, Projections, Magic, and Vendors! Saturday, January 22 at 9pm. $10 in advance and $15 at the door. PS - It's Flutterbug's Birthday!!!`}</p>
           </Col>
           <Col>
             <h2>Details</h2>

@@ -34,9 +34,9 @@ export default function MainFooter() {
                     <Col >
                       <ul>
                         {
-                          location.links.map((link) => {
+                          location.links.map((link, index) => {
                             return (
-                              <Link
+                              <Link key={index + 1}
                                 href={link.link}
                                 alt={link.alt}
                               >
