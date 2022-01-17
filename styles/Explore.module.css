@@ -39,7 +39,7 @@
 {
   background-color: rgb(255, 200, 175);
   position: relative;
-  height: 25vh;
+  height: 15vh;
   width: 100%;
   overflow: hidden;
 }
@@ -58,8 +58,8 @@
 
 .profile-image
 {
-  width: 10vh;
-  height: 10vh;
+  width: 6vh;
+  height: 6vh;
   background-color: lavender;
 }
 
