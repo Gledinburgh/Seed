@@ -1,7 +1,7 @@
 import { IPortfolioDetails } from "../../types";
 
 export const powderedWigMachineDetails: IPortfolioDetails = {
-
+  "type": "person",
   "member": "Powdered Wig Machine",
   "hero": {
     "src": "/Placeholder_1.jpg",

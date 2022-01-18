@@ -11,6 +11,7 @@ export interface IImg {
 }
 
 export interface IPortfolioDetails {
+  "type": string,
   "member": string,
   "hero": IImg,
   "gallery": IImg[],
@@ -45,4 +46,28 @@ export interface IEvent {
   "state": string,
   "day": string,
   "month": string,
+}
+
+export interface IExhibition extends IPortfolioDetails {
+  "type": "exhibition",
+  "member": string,
+  "hero": IImg,
+  "gallery": IImg[],
+  "contactLinks": ILink[],
+  "outLinks": ILink[],
+  "bio": string,
+  "location": {
+    "date": {
+      "month": string,
+      "day": number,
+      "year": number
+    }
+    "name": string,
+    "address": {
+      "street": string,
+      "city": string,
+      "state": string,
+      "zip": number
+    }
+  }
 }

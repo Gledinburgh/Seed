@@ -86,10 +86,15 @@ font-size: 2.5rem;
 }
 
 /* --- Bio --- */
+
+
 .bio-wrapper
 {
   margin: 3.5vh;
-  margin-top: 10vh;
+}
+.details-wrapper{
+
+  margin-bottom: 2vh
 }
 
 /* --- Links --- */

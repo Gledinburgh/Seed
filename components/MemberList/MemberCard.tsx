@@ -1,4 +1,4 @@
-import { Card, Avatar } from 'antd';
+import { Card, Avatar, Col } from 'antd';
 const { Meta } = Card;
 
 import styles from '../../styles/Explore.module.css';
@@ -37,9 +37,12 @@ export default function MemberCard({ member }) {
   }
 
   const Profile = ({ member }) => (
-    <Avatar
-      className={styles["profile-image"]}
-      src={`${profilePath}${member.profile}`} />
+    <Col className={styles["profile-image-wrapper"]}>
+      <Avatar
+        className={styles["profile-image"]}
+        src={`${profilePath}${member.profile}`} />
+
+    </Col>
   );
 
   const Cover = ({ member }) => (

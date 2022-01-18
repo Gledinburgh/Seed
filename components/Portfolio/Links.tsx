@@ -8,12 +8,25 @@ import { Row, Col, Divider } from 'antd';
 
 
 
-export default function Links({ outLinks, contactLinks }: { outLinks: ILink[], contactLinks: ILink[] }) {
+export default function Links({ outLinks, contactLinks, portfolioType }: { outLinks: ILink[], contactLinks: ILink[], portfolioType: any }) {
+
+  var description = "Bio"
+  var links = "Links"
+  var contacts = "Contacts"
+
+  if (portfolioType === "exhibition") {
+    contacts = "Collaborators";
+    description = "About";
+  }
+
 
 
   function setLink(contact: ILink) {
     if (contact && contact.service === "email") {
       return <a className="mailto" href={`mailto:${contact.link}`}>{contact.text}</a>;
+    }
+    if (!contact.link) {
+      return <span>{contact.text}</span>
     }
     else {
       return (
@@ -48,7 +61,7 @@ export default function Links({ outLinks, contactLinks }: { outLinks: ILink[], c
         link = setLink(linkObject);
         icon = setIcon(linkObject.service);
 
-        if (linkObject.link) {
+        if (linkObject.text) {
           return (
             <Row key={link}>
               <span >
@@ -92,7 +105,7 @@ export default function Links({ outLinks, contactLinks }: { outLinks: ILink[], c
         <Col flex={1} id="contacts" className={styles["link-column"]}>
           <Row>
             <Divider className={styles["divider-text"]}>
-              Contacts
+              {contacts}
             </Divider>
           </Row>
           {
