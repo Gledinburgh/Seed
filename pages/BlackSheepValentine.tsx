@@ -24,7 +24,7 @@ export default function PowderedWigMachine() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <PortfolioMain member={blackSheepValentine} />
+      <PortfolioMain portfolio={blackSheepValentine} />
 
     </div>
 

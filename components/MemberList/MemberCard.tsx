@@ -1,3 +1,4 @@
+import { RetweetOutlined } from '@ant-design/icons';
 import { Card, Avatar, Col } from 'antd';
 const { Meta } = Card;
 
@@ -12,38 +13,38 @@ export default function MemberCard({ member }) {
   )
 
   const Description = ({ member }) => {
+
     if (member.tags) {
       return (
         <div>
           {
-            member.tags.map((tag) => {
-              <span>{tag}</span>
+            member.tags.map((tag, index) => {
+              if (member.tags.length - 1 === index) {
+                return <span>{tag}</span>
+              } else {
+                return (<span>{tag} | </span>)
+              }
             })
           }
         </div>
       )
-
     } else {
-      return (
-
-        < div >
-
-          <span>Performace | </span>
-          <span>Music| Writing </span>
-
-        </div >
-      )
+      return null;
     }
   }
 
-  const Profile = ({ member }) => (
-    <Col className={styles["profile-image-wrapper"]}>
-      <Avatar
-        className={styles["profile-image"]}
-        src={`${profilePath}${member.profile}`} />
+  const Profile = ({ member }) => {
+    if (member.type === "project") { return null }
+    return (
+      <Col className={styles["profile-image-wrapper"]}>
+        <Avatar
+          className={styles["profile-image"]}
+          src={`${profilePath}${member.profile}`} />
+      </Col>
+    );
+  }
 
-    </Col>
-  );
+
 
   const Cover = ({ member }) => (
 

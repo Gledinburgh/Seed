@@ -7,25 +7,22 @@ import Bio from './Bio';
 import Links from './Links';
 
 import styles from '../../styles/Portfolio.module.css';
-import { IExhibition, IPortfolioDetails } from '../../types';
-
-
 
 import { useEffect, useState, useContext } from 'react';
 
 
-export default function PortfolioMain({ member }) {
+export default function PortfolioMain({ portfolio }) {
 
   return (
     <Col>
-      <Hero hero={member.hero} text={member.member} />
-      <Nav portfolioType={member.type} />
-      <Gallery />
-      <Bio bio={member.bio} location={member.location} />
+      <Hero hero={portfolio.hero} text={portfolio.member} />
+      <Nav portfolioType={portfolio.type} />
+      <Gallery imagePaths={portfolio.gallery} />
+      <Bio bio={portfolio.bio} location={portfolio.location} />
       <Links
-        portfolioType={member.type}
-        outLinks={member.outLinks}
-        contactLinks={member.contactLinks}
+        portfolioType={portfolio.type}
+        outLinks={portfolio.outLinks}
+        contactLinks={portfolio.contactLinks}
       />
     </Col >
   )

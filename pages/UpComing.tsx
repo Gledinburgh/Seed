@@ -2,8 +2,10 @@
 import { IEvent } from '../types';
 import DetailModal from '../components/EventList/DetailModal';
 import EventList from "../components/EventList/EventList";
-import { Button } from 'antd';
+import { GeneralContext } from '../Context/GeneralContext';
 import { useEffect, useState } from 'react';
+import Head from 'next/head';
+
 
 //----------- Dummy Data Start ------------
 
@@ -60,9 +62,22 @@ export default function UpComing() {
     setIsModalVisible(false);
   };
 
+  const context = GeneralContext();
+
+  useEffect(() => {
+    console.log("useEffect: UpComming")
+    context.setTitle("Upcoming Events");
+  }, [])
+
 
   return (
     <>
+      <Head>
+        <title>Upcomming</title>
+        <meta name="description" content="A list of upcoming black sheep art events, shows, exhibitions and performances" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
       <DetailModal
         isModalVisible={isModalVisible}
         eventDetail={eventsDetails[0]}

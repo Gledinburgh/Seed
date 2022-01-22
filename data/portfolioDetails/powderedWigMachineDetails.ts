@@ -1,5 +1,6 @@
 import { IPortfolioDetails } from "../../types";
 
+
 export const powderedWigMachineDetails: IPortfolioDetails = {
   "type": "person",
   "member": "Powdered Wig Machine",

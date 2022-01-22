@@ -27,12 +27,25 @@ export interface ISiteLocation {
   "links": ILink[]
 }
 
-export interface IMemberDetails {
+export interface ImemberListDetails {
+  "type"?: string,
   "member": string,
   "panel": string,
   "link": string,
   "alt": string,
-  "profile": string
+  "profile": string,
+  "tags"?: string[]
+}
+
+export interface IProjectDetails extends ImemberListDetails {
+  "type": string,
+  "year": number,
+  "member": string,
+  "panel": string,
+  "link": string,
+  "alt": string,
+  "profile": string,
+  "tags"?: string[]
 }
 
 export interface IEvent {

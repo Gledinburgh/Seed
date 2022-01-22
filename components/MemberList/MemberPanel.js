@@ -3,7 +3,7 @@ import { Row, Col } from 'antd';
 import { Image } from 'antd';
 
 import styles from '../../styles/Explore.module.css';
-import { memberDetails } from '../../data/memberDetails';
+import { memberListDetails } from '../../data/memberListDetails';
 
 export default function MemberPanel({ member }) {
 

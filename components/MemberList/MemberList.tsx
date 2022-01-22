@@ -1,32 +1,34 @@
 import MemberCard from './MemberCard';
 import Link from 'next/link';
-
-import { useEffect } from 'react';
-import { GeneralContext } from '../../Context/GeneralContext';
-import { IMemberDetails } from '../../types';
+import { Divider } from 'antd';
 
 
 
 
+export default function MemberList({ listDetails }) {
 
-export default function MemberList({ memberDetails }: { memberDetails: IMemberDetails[] }) {
+  var year: number;
+  const Group = (projectYear) => {
 
-  const context = GeneralContext();
+    if (year != projectYear) {
 
-  useEffect(() => {
-    console.log("useEffect: Members")
-    context.setTitle("Members");
-  }, [])
+      year = projectYear;
+
+      return (<Divider>{projectYear}</Divider>)
+    } else {
+      return null
+    }
+  }
 
   return (
     <div>
-
       {
-        memberDetails.map(member => {
+        listDetails.map(listItem => {
           return (
             <>
-              <Link href="PowderedWigMachine">
-                <a> <MemberCard member={member} /></a>
+              {Group(listItem.year)}
+              <Link href="BlackSheepValentine">
+                <a> <MemberCard member={listItem} /></a>
               </Link>
             </>
           )

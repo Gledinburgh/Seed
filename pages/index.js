@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Texas Arts Collective: Black Sheep</title>
+        <title>Black Sheep Home</title>
         <meta name="description" content="Black Sheep arts collective. View artists portfolios and upcomming events" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -43,10 +43,10 @@ export default function Home() {
             <a> upcoming events </a>
           </Link>
           /
-          {/* <Link href="Archive">
-            <a> archive </a>
+          <Link href="Projects">
+            <a> Projects </a>
           </Link>
-          / */}
+          /
         </p>
 
         <div className={styles.grid}>

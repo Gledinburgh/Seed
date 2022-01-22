@@ -5,7 +5,7 @@ import { useRef } from 'react'
 import styles from '../../styles/Portfolio.module.css';
 
 
-export default function Gallery() {
+export default function Gallery({ imagePaths }) {
 
   const sliderRef = useRef();
 
@@ -27,36 +27,23 @@ export default function Gallery() {
         <Carousel
           ref={sliderRef}
           className={styles.carousel}>
-
-
+          {
+            imagePaths.map((image) => {
+              return (
+                <div>
+                  <Image
+                    className={styles["carousel-image"]}
+                    src={image.src}
+                    alt={image.alt}
+                  />
+                </div>
+              )
+            })
+          }
           <Image
             className={styles["carousel-image"]}
-            src={"/Placeholder_1.jpg"}
+            src={imagePaths[0].src}
           />
-          <div>
-            <Image
-              className={styles["carousel-image"]}
-              src={"/Placeholder_2.jpg"}
-            />
-          </div>
-          <div>
-            <Image
-              className={styles["carousel-image"]}
-              src={"/Placeholder_3.jpg"}
-            />
-          </div>
-          <div>
-            <Image
-              className={styles["carousel-image"]}
-              src={"/Placeholder_1.jpg"}
-            />
-          </div>
-          <div>
-            <Image
-              className={styles["carousel-image"]}
-              src={"/Placeholder_2.jpg"}
-            />
-          </div>
         </Carousel>
 
       </div >
