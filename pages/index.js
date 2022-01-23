@@ -14,7 +14,7 @@ export default function Home() {
   const title = GeneralContext();
 
   useEffect(() => {
-    title.setTitle("home");
+    title.setTitle("Home");
   })
 
 

@@ -29,6 +29,7 @@ export const siteMap: ISiteLocation[] = [
   {
     "title": "Home",
     "href": "/",
+    "key": 0,
     "links": [
       {
         "service": "string",
@@ -41,16 +42,20 @@ export const siteMap: ISiteLocation[] = [
   {
     "title": "Projects",
     "href": "/Projects",
-    "links": projects
+    "key": 1,
+    "links": projects,
   },
   {
     "title": "Portfolios",
     "href": "/Members",
+    "key": 2,
     "links": portfolios
   },
   // {
   //   "title": "Get Involved",
   //   "href": "/GetInvolved",
+  //    "key":3,
+
   //   "links": [
   //     {
   //       "service": "string",
@@ -63,6 +68,7 @@ export const siteMap: ISiteLocation[] = [
   {
     "title": "Upcoming",
     "href": "/UpComing",
+    "key": 4,
     "links": [
       {
         "service": "string",

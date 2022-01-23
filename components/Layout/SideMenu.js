@@ -33,7 +33,7 @@ export default function SideMenu({ visibility, toggleMenuVisibility }) {
           {
             siteMap.map((page, index) => {
               return (
-                <Menu.Item onClick={() => toggleMenuVisibility()} key={index + 1}>
+                <Menu.Item onClick={() => toggleMenuVisibility()} key={page.key}>
                   <Link href={page.href}>
                     {page.title}
                   </Link>

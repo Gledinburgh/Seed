@@ -24,6 +24,7 @@ export interface IPortfolioDetails {
 export interface ISiteLocation {
   "title": string,
   "href": string,
+  "key": number
   "links": ILink[]
 }
 

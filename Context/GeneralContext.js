@@ -7,6 +7,8 @@ export function GeneralContextWrapper({ children }) {
   const [title, setTitle] = useState("Context Default Title");
   const updateTitle = (string) => setTitle(string);
 
+  updatePage
+
   return (
     <AppContext.Provider value={{ title, setTitle }}>
       {children}
@@ -19,6 +21,7 @@ export function GeneralContext() {
   return useContext(AppContext);
 
 }
+
 
 
 
