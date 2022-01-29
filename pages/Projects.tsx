@@ -1,26 +1,26 @@
 import MemberList from "../components/MemberList/MemberList";
+import PageHead from "../components/Layout/PageHead";
+import Head from 'next/head';
+
 import { projectListDetails } from '../data/projectListDetails';
+import { siteMap } from '../data/siteMap';
+
 import { useEffect } from 'react';
 import { GeneralContext } from '../Context/GeneralContext';
-import Head from 'next/head';
 
 export default function Archive() {
 
-  const context = GeneralContext();
+  const siteState = GeneralContext();
+  const currentLocation = siteState.currentLocation;
 
   useEffect(() => {
     console.log("useEffect: Projects")
-    context.setTitle("Projects");
-  }, [])
+    siteState.updateLocation(siteMap.projects);
+  }, [siteState])
 
   return (
     <>
-      <Head>
-        <title>Projects</title>
-        <meta name="description" content="Current and past projects, exhibitions, events, and performances " />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+      <PageHead title={currentLocation.title} description={currentLocation.description} />
       <MemberList listDetails={projectListDetails} />
     </>
 

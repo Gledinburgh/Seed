@@ -4,8 +4,8 @@ import { GeneralContextWrapper } from '../Context/GeneralContext';
 import { useEffect, useState } from 'react';
 import { useRouter } from "next/router";
 
-import MainLayout from '../components/Layout/MainLayout.js';
-import Loading from '../components/Loading.js';
+import MainLayout from '../components/Layout/MainLayout';
+import Loading from '../components/Loading';
 
 function MyApp({ Component, pageProps }) {
 

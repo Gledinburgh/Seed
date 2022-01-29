@@ -13,6 +13,7 @@ export interface IImg {
 export interface IPortfolioDetails {
   "type": string,
   "member": string,
+  "description": string,
   "hero": IImg,
   "gallery": IImg[],
   "contactLinks": ILink[],
@@ -24,8 +25,17 @@ export interface IPortfolioDetails {
 export interface ISiteLocation {
   "title": string,
   "href": string,
-  "key": number
+  "key": number,
+  "description": string,
   "links": ILink[]
+}
+
+export interface ISiteMap {
+  "home": ISiteLocation,
+  "projects": ISiteLocation,
+  "portfolios": ISiteLocation,
+  "getInvolved": ISiteLocation,
+  "upComing": ISiteLocation,
 }
 
 export interface ImemberListDetails {
@@ -65,6 +75,7 @@ export interface IEvent {
 export interface IExhibition extends IPortfolioDetails {
   "type": "exhibition",
   "member": string,
+  "description": string,
   "hero": IImg,
   "gallery": IImg[],
   "contactLinks": ILink[],

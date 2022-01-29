@@ -39,7 +39,7 @@ const Details = ({ event, showModal }) => (
 )
 
 const Date = ({ event, showModal }) => (
-  <Col onClick={showModal} style={{ padding: "10px", borderRight: "solid" }}>
+  <Col onClick={showModal} className={styles["profile-image-wrapper"]}>
     < Row >{event.month}</Row >
     < Row >{event.day}</Row >
   </Col >

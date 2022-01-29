@@ -1,11 +1,13 @@
-
-import { IEvent } from '../types';
+import Head from 'next/head';
 import DetailModal from '../components/EventList/DetailModal';
 import EventList from "../components/EventList/EventList";
+import PageHead from "../components/Layout/PageHead";
+
 import { GeneralContext } from '../Context/GeneralContext';
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 
+import { IEvent } from '../types';
+import { siteMap } from '../data/siteMap';
 
 //----------- Dummy Data Start ------------
 
@@ -62,21 +64,18 @@ export default function UpComing() {
     setIsModalVisible(false);
   };
 
-  const context = GeneralContext();
+  const siteState = GeneralContext();
+  const currentLocation = siteState.currentLocation;
 
   useEffect(() => {
-    console.log("useEffect: UpComming")
-    context.setTitle("Upcoming Events");
-  }, [])
+    console.log("useEffect: Events")
+    siteState.updateLocation(siteMap.upComing);
+  }, [siteState])
 
 
   return (
     <>
-      <Head>
-        <title>Upcomming</title>
-        <meta name="description" content="A list of upcoming black sheep art events, shows, exhibitions and performances" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHead title={currentLocation.title} description={currentLocation.description} />
 
       <DetailModal
         isModalVisible={isModalVisible}

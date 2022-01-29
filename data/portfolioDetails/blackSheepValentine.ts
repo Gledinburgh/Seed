@@ -3,6 +3,7 @@ import { IPortfolioDetails, IExhibition } from "../../types";
 export const blackSheepValentine: IExhibition = {
   "type": "exhibition",
   "member": "Black Sheep Valentine",
+  "description": "Art Exhibition page for Black Sheep Valintine. San Antonio TX, 2019",
   "hero": {
     "src": "/Placeholder_1.jpg",
     "alt": "placeholder Image"

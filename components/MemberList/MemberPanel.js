@@ -1,5 +1,4 @@
 import { Row, Col } from 'antd';
-// import Image from 'next/image';
 import { Image } from 'antd';
 
 import styles from '../../styles/Explore.module.css';

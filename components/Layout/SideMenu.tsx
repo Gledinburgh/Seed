@@ -1,11 +1,16 @@
 import { Drawer, Menu } from 'antd';
 import { useState, useEffect } from 'react';
-import { siteMap } from '../../data/siteMap';
-import { ILink, ISiteLocation } from '../../types/index';
+import { siteMapArray as siteMap } from '../../data/siteMap';
+import { ISiteLocation } from '../../types/index';
+import { GeneralContext } from '../../Context/GeneralContext';
+
 
 import Link from 'next/link'
 
 export default function SideMenu({ visibility, toggleMenuVisibility }) {
+
+  const siteState = GeneralContext();
+  const currentLocation: ISiteLocation = siteState.currentLocation;
 
   const [visible, setVisible] = useState(false);
 
@@ -13,14 +18,14 @@ export default function SideMenu({ visibility, toggleMenuVisibility }) {
     setVisible(true);
   };
 
-
   const onClose = () => {
     toggleMenuVisibility()
   };
+
   useEffect(() => {
     console.log("useEffect: Side Menu")
     setVisible(visibility);
-  }, [visibility])
+  }, [visibility, currentLocation])
 
   return (
     <Drawer
@@ -29,7 +34,11 @@ export default function SideMenu({ visibility, toggleMenuVisibility }) {
       onClose={onClose}
       visible={visible}>
       <div>
-        <Menu mode="inline" defaultSelectedKeys={['1']}>
+        <Menu
+          mode="inline"
+          defaultSelectedKeys={[String(currentLocation.key)]}
+          selectedKeys={[String(currentLocation.key)]}
+        >
           {
             siteMap.map((page, index) => {
               return (

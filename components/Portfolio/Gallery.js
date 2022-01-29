@@ -30,7 +30,7 @@ export default function Gallery({ imagePaths }) {
           {
             imagePaths.map((image) => {
               return (
-                <div>
+                <div key={image.src}>
                   <Image
                     className={styles["carousel-image"]}
                     src={image.src}

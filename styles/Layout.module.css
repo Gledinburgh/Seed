@@ -1,20 +1,13 @@
 .padded
 {
-  display: block;
   background-color: rgb(224, 224, 224);
   z-index: 1;
   color: rgb(0, 0, 0);
-  padding-left: 0 ;
-  padding-right: 0 ;
-  height: 50vh;
-
-
+  padding-left: max(3vw, 3vh);
+  padding-right: max(3vw, 3vh);
 }
 
-.layer
-{
-  height: 3.33vh;
-}
+
 
 .menu {
   vertical-align: middle;
@@ -48,16 +41,5 @@
 }
 
 /* --- Site Map --- */
-
-.sitemap-links
-{
-}
-
-.tab
-{
-  padding-left: 2vh;
-  padding-right: 2vh;
-  width: 100%;
-}
 
 

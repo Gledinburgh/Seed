@@ -1,12 +1,17 @@
-import Head from 'next/head';
 import { promises as fs } from 'fs'
-import path from 'path'
 
 import PortfolioMain from "../components/Portfolio/PortfolioMain";
-import { powderedWigMachineDetails } from '../data/portfolioDetails/powderedWigMachineDetails';
+import PageHead from "../components/Layout/PageHead";
+
+
+import { powderedWigMachineDetails as details } from '../data/portfolioDetails/powderedWigMachineDetails';
+import { siteMap } from '../data/siteMap';
 
 import { GeneralContext } from '../Context/GeneralContext';
 import { useEffect } from "react";
+
+
+/* -------------------- Imports end -------------------------- */
 
 export async function getStaticProps() {
   const galleryDirectory = './public/PowderedWigMachine/portfolioGallery';
@@ -25,26 +30,21 @@ export async function getStaticProps() {
 
 export default function PowderedWigMachine({ imagePaths }) {
 
-  const context = GeneralContext();
-  powderedWigMachineDetails.gallery = imagePaths;
-
-  console.log("imagepaths:", imagePaths[0].src)
+  const siteState = GeneralContext();
+  details.gallery = imagePaths;
 
   useEffect(() => {
     console.log("useEffect: Powdered Wig Machine")
-    context.setTitle("Powdered Wig Machine");
-  }, [])
+    siteState.updateLocation(siteMap.portfolios);
+  }, [siteState])
 
   return (
 
     <div>
-      <Head>
-        <title>Powdered Wig Machine</title>
-        <meta name="description" content="Portfolio page for Powdered Wig machine (Brandon Pitman)" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
-      <PortfolioMain portfolio={powderedWigMachineDetails} />
+      <PageHead title={details.member} description={details.description} />
+
+      <PortfolioMain portfolio={details} />
 
     </div>
 

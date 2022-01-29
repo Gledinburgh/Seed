@@ -68,6 +68,9 @@
   flex-direction: column;
   justify-content: center;
   height: 10vh;
+  border-right: solid black;
+  padding-right: 10px;
+
 }
 
 /* -- Loading screen -- */

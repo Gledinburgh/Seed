@@ -1,27 +1,26 @@
 import MemberList from "../components/MemberList/MemberList";
+import PageHead from "../components/Layout/PageHead";
 import { memberListDetails } from '../data/memberListDetails';
+import { siteMap } from '../data/siteMap';
 import { useEffect } from 'react';
 import { GeneralContext } from '../Context/GeneralContext';
-import Head from 'next/head';
+import { ISiteLocation } from "../types";
 
 
 
 export default function Members() {
 
-  const context = GeneralContext();
+  const siteState = GeneralContext();
+  const currentLocation = siteState.currentLocation;
 
   useEffect(() => {
     console.log("useEffect: Members")
-    context.setTitle("Members");
-  }, [])
+    siteState.updateLocation(siteMap.portfolios);
+  }, [siteState])
 
   return (
     <>
-      <Head>
-        <title>Powdered Wig Machine</title>
-        <meta name="description" content="Portfolio page for Powdered Wig machine (Brandon Pitman)" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <PageHead title={currentLocation.title} description={currentLocation.description} />
 
       <MemberList listDetails={memberListDetails} />
 

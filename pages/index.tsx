@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
+import { siteMap } from '../data/siteMap';
 import { GeneralContext } from '../Context/GeneralContext';
 import { useEffect } from "react";
 
@@ -8,13 +9,16 @@ import { useEffect } from "react";
 import Link from 'next/link';
 import Script from 'next/script';
 
+/* -------------------- Imports end -------------------------- */
+
 
 export default function Home() {
 
-  const title = GeneralContext();
+  const siteState = GeneralContext();
 
   useEffect(() => {
-    title.setTitle("Home");
+    siteState.updateLocation(siteMap.home);
+    console.log("log from home:", siteState.currentLocation)
   })
 
 
@@ -22,7 +26,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Black Sheep Home</title>
+        <title>{siteState.currentLocation.title}</title>
         <meta name="description" content="Black Sheep arts collective. View artists portfolios and upcomming events" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

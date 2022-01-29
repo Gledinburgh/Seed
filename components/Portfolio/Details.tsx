@@ -1,6 +1,6 @@
 import styles from '../../styles/Portfolio.module.css';
 
-import { Row, Col } from 'antd';
+import { Row } from 'antd';
 
 
 
