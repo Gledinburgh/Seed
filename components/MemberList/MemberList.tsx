@@ -1,6 +1,6 @@
 import MemberCard from './MemberCard';
 import Link from 'next/link';
-import { Divider } from 'antd';
+import { Divider, Row, Col } from 'antd';
 
 
 
@@ -18,20 +18,20 @@ export default function MemberList({ listDetails }) {
   }
 
   return (
-    <div>
+    <Row justify='center'>
       {
         listDetails.map(listItem => {
           return (
-            <>
+            <Col>
               {Group(listItem.year)}
               <Link href="PowderedWigMachine">
                 <a> <MemberCard member={listItem} /></a>
               </Link>
-            </>
+            </Col>
           )
         })
       }
-    </div>
+    </Row>
   )
 }
 

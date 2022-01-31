@@ -14,6 +14,23 @@
 .card-wrapper
 {
   margin: 2vh;
+  width: 400px;
+}
+
+
+@media screen and (max-width: 601px) {
+.card-wrapper
+{
+  width: 92vw;
+}
+
+.cover-wrapper
+{
+  height: 15vh;
+  width: 100%;
+}
+
+
 }
 
 .profile-wrapper
@@ -39,7 +56,7 @@
 {
   background-color: rgb(255, 200, 175);
   position: relative;
-  height: 15vh;
+  height: 20vh;
   width: 100%;
   overflow: hidden;
 }
@@ -58,8 +75,8 @@
 
 .profile-image
 {
-  width: 8vh;
-  height: 8vh;
+  width: 7vh;
+  height: 7vh;
   background-color: lavender;
 }
 .profile-image-wrapper{
@@ -67,7 +84,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  height: 10vh;
+  height: 8vh;
   border-right: solid black;
   padding-right: 10px;
 

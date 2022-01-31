@@ -61,7 +61,7 @@ export default function MemberCard({ member }) {
   return (
     <Card
       className={styles["card-wrapper"]}
-      bodyStyle={{ padding: "2vh" }}
+      bodyStyle={{ padding: "1.5vh" }}
       hoverable={true}
       cover={<Cover member={member} />}
     >
