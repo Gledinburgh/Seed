@@ -5,6 +5,7 @@
   color: rgb(0, 0, 0);
   padding-left: max(3vw, 3vh);
   padding-right: max(3vw, 3vh);
+  min-height: 20rem;
 }
 
 
