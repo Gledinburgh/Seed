@@ -13,12 +13,14 @@ export interface IImg {
 export interface IPortfolioDetails {
   "type": string,
   "member": string,
+  "panel": string,
   "description": string,
   "hero": IImg,
   "gallery": IImg[],
   "contactLinks": ILink[],
   "outLinks": ILink[],
   "resume"?: any,
+  "quote"?: string,
   "bio": string
 }
 

@@ -3,6 +3,7 @@ import { IPortfolioDetails } from "../../types";
 
 export const powderedWigMachineDetails: IPortfolioDetails = {
   "type": "person",
+  "panel": "",
   "member": "Powdered Wig Machine",
   "description": "Portfolio page for Powdered Wig machine (Brandon Pitman)",
   "hero": {

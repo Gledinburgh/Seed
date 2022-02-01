@@ -59,7 +59,7 @@ export default function MainFooter() {
                                 linkGroup.map((link, index) => {
                                   return (
                                     <Link key={index}
-                                      href={link.link}
+                                      href={!link.link ? "Wildhoneypot" : link.link}
                                     >
                                       <a>
                                         <li>{link.text}</li>

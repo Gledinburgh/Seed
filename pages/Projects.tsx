@@ -7,6 +7,7 @@ import { siteMap } from '../data/siteMap';
 
 import { useEffect } from 'react';
 import { GeneralContext } from '../Context/GeneralContext';
+import ArchiveList from "../components/MemberList/ArchiveList";
 
 export default function Archive() {
 
@@ -21,7 +22,7 @@ export default function Archive() {
   return (
     <>
       <PageHead title={currentLocation.title} description={currentLocation.description} />
-      <MemberList listDetails={projectListDetails} />
+      <ArchiveList listDetails={projectListDetails} />
     </>
 
   )

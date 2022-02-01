@@ -24,7 +24,7 @@ export default function MemberList({ listDetails }) {
           return (
             <Col>
               {Group(listItem.year)}
-              <Link href="PowderedWigMachine">
+              <Link href={!listItem.link ? "Wildhoneypot" : listItem.link}>
                 <a> <MemberCard member={listItem} /></a>
               </Link>
             </Col>

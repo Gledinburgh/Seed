@@ -18,7 +18,7 @@ export default function PortfolioMain({ portfolio }) {
       <Hero hero={portfolio.hero} text={portfolio.member} />
       <Nav portfolioType={portfolio.type} />
       <Gallery imagePaths={portfolio.gallery} />
-      <Bio bio={portfolio.bio} location={portfolio.location} />
+      <Bio quote={portfolio.quote} bio={portfolio.bio} location={portfolio.location} />
       <Links
         portfolioType={portfolio.type}
         outLinks={portfolio.outLinks}
