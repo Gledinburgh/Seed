@@ -48,12 +48,13 @@ export default function ArchiveList({ listDetails }) {
 
   return (
     <>
+      <Row style={{ height: "4vw" }} />
       {
         listGroups.map((group) => {
           return (
-            <Row justify='center'>
-              <Divider>{group[0].year}</Divider>
-              <Row justify='center'>
+            <Row >
+              <Divider orientation='center'><h2 style={{ margin: 0, lineHeight: "0" }}>{group[0].year}</h2></Divider>
+              <Row justify='start'>
                 {
                   group.map((listItem) => {
                     return (

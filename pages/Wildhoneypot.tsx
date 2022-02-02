@@ -14,11 +14,11 @@ import { useEffect } from "react";
 /* -------------------- Imports end -------------------------- */
 
 export async function getStaticProps() {
-  const galleryDirectory = './public/PowderedWigMachine/portfolioGallery';
+  const galleryDirectory = './public/Wildhoneypot/portfolioGallery';
   var filenames = await fs.readdir(galleryDirectory);
 
   var galleryImagePaths = await filenames.map((filename) => {
-    return ({ "src": "/PowderedWigMachine/portfolioGallery/" + filename, "alt": "Image of Powdered Wig Machine's artwork" })
+    return ({ "src": "/Wildhoneypot/portfolioGallery/" + filename, "alt": "Image of Wildhoneypot's artwork" })
   })
 
   return {
@@ -34,7 +34,7 @@ export default function Wildhoneypot({ imagePaths }) {
   details.gallery = imagePaths;
 
   useEffect(() => {
-    console.log("useEffect: Powdered Wig Machine")
+    console.log("useEffect: Wildhoneypot")
     siteState.updateLocation(siteMap.portfolios);
   }, [siteState])
 

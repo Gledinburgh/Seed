@@ -1,5 +1,6 @@
 import { Row, Col, Carousel, Image } from 'antd';
-import { useRef } from 'react'
+import { useRef } from 'react';
+import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 
 
 import styles from '../../styles/Portfolio.module.css';
@@ -22,8 +23,8 @@ export default function Gallery({ imagePaths }) {
       <div id="gallery" style={{ height: "5vh" }}></div>
       <div className={styles["carousel-wrapper"]}>
 
-        <button onClick={() => prev()} className={styles["left-arrow"]} > L</button>
-        <button onClick={next} className={styles["right-arrow"]} >R </button>
+        <button onClick={() => prev()} className={styles["left-arrow"]} > <LeftOutlined /></button>
+        <button onClick={next} className={styles["right-arrow"]} ><RightOutlined /></button>
         <Carousel
           ref={sliderRef}
           className={styles.carousel}>
@@ -40,10 +41,6 @@ export default function Gallery({ imagePaths }) {
               )
             })
           }
-          <Image
-            className={styles["carousel-image"]}
-            src={imagePaths[0].src}
-          />
         </Carousel>
 
       </div >
