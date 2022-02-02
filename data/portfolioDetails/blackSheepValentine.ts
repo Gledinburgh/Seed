@@ -4,6 +4,7 @@ export const blackSheepValentine: IExhibition = {
   "type": "exhibition",
   "member": "Black Sheep Valentine",
   "description": "Art Exhibition page for Black Sheep Valintine. San Antonio TX, 2019",
+  "panel": "",
   "hero": {
     "src": "/Placeholder_1.jpg",
     "alt": "placeholder Image"
@@ -89,5 +90,5 @@ export const blackSheepValentine: IExhibition = {
       "state": "TX",
       "zip": 78202
     }
-  }
+  },
 };
