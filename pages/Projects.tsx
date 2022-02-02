@@ -21,7 +21,7 @@ export default function Archive() {
 
   return (
     <>
-      <PageHead title={currentLocation.title} description={currentLocation.description} />
+      <PageHead favicon="/favicon.ico" title={currentLocation.title} description={currentLocation.description} />
       <ArchiveList listDetails={projectListDetails} />
     </>
 

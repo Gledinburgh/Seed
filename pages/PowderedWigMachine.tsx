@@ -42,7 +42,7 @@ export default function PowderedWigMachine({ imagePaths }) {
 
     <div>
 
-      <PageHead title={details.member} description={details.description} />
+      <PageHead favicon="/favicon.ico" title={details.member} description={details.description} />
 
       <PortfolioMain portfolio={details} />
 

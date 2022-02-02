@@ -75,7 +75,7 @@ export default function UpComing() {
 
   return (
     <>
-      <PageHead title={currentLocation.title} description={currentLocation.description} />
+      <PageHead favicon="/favicon.ico" title={currentLocation.title} description={currentLocation.description} />
 
       <DetailModal
         isModalVisible={isModalVisible}

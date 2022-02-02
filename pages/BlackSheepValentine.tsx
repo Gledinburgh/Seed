@@ -29,7 +29,7 @@ export default function BlackSheepValentine() {
         <link rel="icon" href="/favicon.ico" />
       </Head> */}
 
-      <PageHead title={blackSheepValentine.member} description={blackSheepValentine.description} />
+      <PageHead favicon="/favicon.ico" title={blackSheepValentine.member} description={blackSheepValentine.description} />
 
       <PortfolioMain portfolio={blackSheepValentine} />
 

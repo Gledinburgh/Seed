@@ -17,6 +17,7 @@ export async function getStaticProps() {
   const galleryDirectory = './public/Wildhoneypot/portfolioGallery';
   var filenames = await fs.readdir(galleryDirectory);
 
+  var favicon = "/Wildhoneypot/favicon-wildhoneypot.ico";
   var galleryImagePaths = await filenames.map((filename) => {
     return ({ "src": "/Wildhoneypot/portfolioGallery/" + filename, "alt": "Image of Wildhoneypot's artwork" })
   })
@@ -24,14 +25,16 @@ export async function getStaticProps() {
   return {
     props: {
       imagePaths: await Promise.all(galleryImagePaths),
+      favicon: favicon
     },
   }
 }
 
-export default function Wildhoneypot({ imagePaths }) {
+export default function Wildhoneypot({ favicon, imagePaths }) {
 
   const siteState = GeneralContext();
   details.gallery = imagePaths;
+
 
   useEffect(() => {
     console.log("useEffect: Wildhoneypot")
@@ -42,7 +45,7 @@ export default function Wildhoneypot({ imagePaths }) {
 
     <div>
 
-      <PageHead title={details.member} description={details.description} />
+      <PageHead favicon={favicon} title={details.member} description={details.description} />
 
       <PortfolioMain portfolio={details} />
 
