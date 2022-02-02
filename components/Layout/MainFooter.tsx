@@ -50,9 +50,9 @@ export default function MainFooter() {
                 >
                   <Row gutter={30}>
                     {
-                      divideLinks(location.links).map((linkGroup) => {
+                      divideLinks(location.links).map((linkGroup, index) => {
                         return (
-                          <Col >
+                          <Col key={index}>
                             <ul>
                               {
 

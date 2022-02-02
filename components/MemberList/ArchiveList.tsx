@@ -50,16 +50,16 @@ export default function ArchiveList({ listDetails }) {
     <>
       <Row style={{ height: "4vw" }} />
       {
-        listGroups.map((group) => {
+        listGroups.map((group, index) => {
           return (
-            <Row >
+            <Row key={index}>
               <Divider orientation='center'><h2 style={{ margin: 0, lineHeight: "0" }}>{group[0].year}</h2></Divider>
               <Row justify='start'>
                 {
-                  group.map((listItem) => {
+                  group.map((listItem, index) => {
                     return (
                       <>
-                        <Col>
+                        <Col key={index}>
                           <Link href="PowderedWigMachine">
                             <a>
                               <MemberCard member={listItem} />

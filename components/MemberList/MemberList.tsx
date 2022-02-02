@@ -20,9 +20,9 @@ export default function MemberList({ listDetails }) {
   return (
     <Row justify='center'>
       {
-        listDetails.map(listItem => {
+        listDetails.map((listItem, index) => {
           return (
-            <Col>
+            <Col key={index}>
               {Group(listItem.year)}
               <Link href={!listItem.link ? "Wildhoneypot" : listItem.link}>
                 <a> <MemberCard member={listItem} /></a>
